@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "left",
+    "width": 48,
+    "height": "100%",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "spacing": 0,
+    "modules-left": [
+        "custom/launcher",
+        "cpu",
+        "memory",
+        "backlight",
+        "custom/spacer1",
+        "hyprland/workspaces",
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "clock",
+        "network",
+        "battery",
+        "tray",
+        "custom/powermenu"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "sort-by-number": true,
+        "format-icons": {
+            "active": "󰮯",
+            "urgent": "󰑊",
+            "default": "󰊠",
+            "focused": "󰮯",
+            "empty": "󰑊"
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        }
+    },
+    "cpu": {
+        "format": "󰍛\n{usage}%",
+        "interval": 2,
+        "tooltip": false
+    },
+    "memory": {
+        "format": "\n{used:0.1f}\nGB",
+        "interval": 3,
+        "tooltip": false
+    },
+    "network": {
+        "format-wifi": " 󰖩\n{essid:.4}",
+        "format-disconnected": "󰖪\nOff",
+        "interval": 5,
+        "tooltip": false,
+        "on-click": "kitty -e nmtui"
+    },
+    "pulseaudio": {
+        "format": " {icon}\n{volume}%",
+        "format-icons": ["", "", ""],
+        "tooltip": false,
+        "on-click": "pavucontrol"
+    },
+    "battery": {
+        "format": " {icon}\n{capacity}%",
+        "tooltip-format": "{time}", 
+        "format-icons": {
+            "charging": ["󰂄", "󰂅", "󰂆", "󰂇", "󰂈", "󰂉", "󰂊", "󰂋", "󰂅"], // icons when charging
+            "discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"], // icons when on battery
+            "full": ["󰁹"]
+        },
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip": true
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "scroll-step": 1
+      },
+    "clock": {
+        "format": "󰥔\n{:%H\n%M}",
+        "tooltip": false
+    },
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "rofi -show drun"
+    },
+    "custom/powermenu": {
+        "format": "",
+        "on-click": "wlogout"
+    },
+    "custom/spacer1": {
+        "format": "\n\n\n\n\n\n\n"
+    }
+}

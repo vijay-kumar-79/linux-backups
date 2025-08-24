@@ -1,0 +1,104 @@
+* {
+    font-family: "RecMonoLinear Nerd Font";
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(40, 44, 52, 0.8); /* Semi-transparent dark background */
+    color: #d8dee9;
+    border-right: 1px solid rgba(136, 192, 208, 0.2); /* Subtle border */
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 8px 0;
+    margin: 16px 0;
+}
+
+#workspaces button {
+    color: #88c0d0;
+    padding: 8px 0;
+    margin: 0;
+    /*min-width: 48px;  Match your bar width */
+}
+
+#workspaces button.active {
+    color: #ebcb8b;
+    background: rgba(235, 203, 139, 0.1);
+}
+
+#workspaces button:hover {
+    color: #d8dee9;
+    background: rgba(216, 222, 233, 0.1);
+}
+
+/* Module containers */
+#cpu, #memory, #pulseaudio, #clock, #tray {
+    padding: 8px 0;
+    margin: 4px 0;
+}
+
+/* Icons */
+#custom-launcher {
+    color: #5e81ac;
+    font-size: 18px;
+    padding: 16px 0 8px 0;
+    margin-bottom: 5px;
+}
+
+#custom-powermenu {
+    color: #bf616a;
+    font-size: 18px;
+    padding: 8px 0 16px 0;
+    margin-top: 16px;
+}
+
+#network {
+    color: #d08770; /* A nord-compatible orange color */
+    padding: 8px 0;
+    margin: 4px 0;
+}
+
+#network.disconnected {
+    color: #bf616a; /* Red color when disconnected */
+}
+
+/* Module text colors */
+#cpu { color: #bf616a; }
+#memory { color: #b48ead; }
+#pulseaudio { color: #a3be8c; }
+#clock { color: #ebcb8b; }
+
+/* Tray styling */
+#tray {
+    padding: 8px 0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    color: #bf616a;
+}
+
+/* Spacer styling */
+#custom-spacer1 {
+    padding: 0;
+    margin: 0;
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(40, 44, 52, 0.9);
+    border: 1px solid rgba(136, 192, 208, 0.2);
+    border-radius: 4px;
+}
+
+tooltip label {
+    color: #d8dee9;
+}
